@@ -1,0 +1,42 @@
+
+#numerosContainer {
+  margin-top: 30px;
+}
+
+#numeros {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numero {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.numero.clicked {
+  background-color: red;
+  color: white;
+}
+
+
+#resultado {
+  font-size: 38px; /* Tamaño de fuente más grande */
+  margin-top: 20px; /* Espacio entre el botón y el número */
+}/* Estilos anteriores se mantienen */
+
+#boris {
+  position: bottom;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
