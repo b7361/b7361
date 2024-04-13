@@ -11,7 +11,7 @@ function generarNumeroAleatorio() {
   } while (numerosGenerados.includes(numeroAleatorio));
 
   numerosGenerados.push(numeroAleatorio);
-  document.getElementById('resultado').innerText = "" + numeroAleatorio;
+  document.getElementById('resultado').innerText = "Número aleatorio: " + numeroAleatorio;
 
   // Marcar el número aleatorio en rojo
   var numeros = document.getElementsByClassName("numero");
@@ -26,10 +26,9 @@ function toggleAutoGenerate() {
   var autoGenerate = document.getElementById("autoGenerate").checked;
 
   if (autoGenerate) {
-    autoGenerateInterval = setInterval(generarNumeroAleatorio, 3070); // Genera cada 4 segundos
+    autoGenerateInterval = setInterval(generarNumeroAleatorio, 4000); // Genera cada 4 segundos
   } else {
     clearInterval(autoGenerateInterval);
-    document.getElementById("autoGenerate").checked = false; // Desmarcar la casilla de verificación
   }
 }
 
