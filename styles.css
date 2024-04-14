@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -28,7 +28,7 @@
 
 
 #resultado {
-  font-size: 38px; /* Tamaño de fuente más grande */
+  font-size: 40px; /* Tamaño de fuente más grande */
   margin-top: 20px; /* Espacio entre el botón y el número */
 }/* Estilos anteriores se mantienen */
 

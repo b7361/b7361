@@ -7,18 +7,19 @@
   <title>BORIS</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+  <body>
   <div class="container">
     <div class="box">
       <h1> BINGO </h1>
-      <p>Haz clic en el botón de abajo para generar un número aleatorio entre 1 y 90 o activa la casilla para generación automática cada 4 segundos:</p>
+      <p>Haz clic en el botón de abajo para generar un número aleatorio o activa la casilla para generación automática.</p>
       <div id="randomBox">
         <button onclick="generarNumeroAleatorio()">Generar</button>    <label class="switch">    
           <input type="checkbox" id="autoGenerate" onclick="toggleAutoGenerate()">
-          <span class="slider round">    </span>
+          <span class="slider round"> </span>
         </label>
         <button onclick="detenerGeneracionAutomatica()">Detener</button>
       </div>Auto
+      </p>
       <p id="resultado"></p>
       <div id="numerosContainer">
         <p>Números del 1 al 90:</p>
@@ -27,6 +28,12 @@
   </div>
   </div>
   <script src="script.js"></script>
+
+<pre>
+
+      Boris
+      </pre>
+
 </body>
 </html>
 

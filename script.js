@@ -55,7 +55,7 @@ function initNumeros() {
     var numero = document.createElement("div");
     numero.innerText = i;
     numero.classList.add("numero");
-    numero.onclick = function() {
+    numero.onclic = function() {
       var num = parseInt(this.innerText);
       document.getElementById('resultado').innerText = "Número aleatorio: " + num;
       var numeros = document.getElementsByClassName("numero");
