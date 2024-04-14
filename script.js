@@ -11,7 +11,7 @@ function generarNumeroAleatorio() {
   } while (numerosGenerados.includes(numeroAleatorio));
 
   numerosGenerados.push(numeroAleatorio);
-  document.getElementById('resultado').innerText = "" + numeroAleatorio;
+  document.getElementById('resultado').innerText = " " + numeroAleatorio;
 
   // Marcar el número aleatorio en rojo
   var numeros = document.getElementsByClassName("numero");
@@ -20,13 +20,17 @@ function generarNumeroAleatorio() {
       numeros[i].classList.add("clicked");
     }
   }
+
+  // Leer el número en voz alta
+  leerNumeroEnVoz(numeroAleatorio);
 }
 
 function toggleAutoGenerate() {
   var autoGenerate = document.getElementById("autoGenerate").checked;
 
   if (autoGenerate) {
-    autoGenerateInterval = setInterval(generarNumeroAleatorio, 3060); // Genera cada 4 segundos
+    autoGenerateInterval = setInterval(generarNumeroAleatorio, 3055); // Genera cada 4 segundos
+    generarNumeroAleatorio(); // Genera el primer número al activar la generación automática
   } else {
     clearInterval(autoGenerateInterval);
   }
@@ -37,6 +41,12 @@ function detenerGeneracionAutomatica() {
   document.getElementById("autoGenerate").checked = false; // Desmarcar la casilla de verificación
 }
 
+function leerNumeroEnVoz(numero) {
+  var mensaje = " " + numero;
+  var voz = new SpeechSynthesisUtterance(mensaje);
+  voz.lang = 'es-ES'; // Establece el idioma en español
+  window.speechSynthesis.speak(voz);
+}
 
 // Función para inicializar los números del 1 al 90
 function initNumeros() {
@@ -47,7 +57,7 @@ function initNumeros() {
     numero.classList.add("numero");
     numero.onclick = function() {
       var num = parseInt(this.innerText);
-      document.getElementById('resultado').innerText = " " + num;
+      document.getElementById('resultado').innerText = "Número aleatorio: " + num;
       var numeros = document.getElementsByClassName("numero");
       for (var j = 0; j < numeros.length; j++) {
         if (parseInt(numeros[j].innerText) === num) {
